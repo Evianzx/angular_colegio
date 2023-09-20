@@ -1,0 +1,22 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Asignar Docente </h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="salir()"></button>
+</div>
+<div class="modal-body">
+    <form>
+        <div class="mb-3">
+            <label for="boton">asginar</label>
+            <div class="input-group">
+                <select name="seleccion" id="" [(ngModel)]="idP">
+                    <option value=""></option>
+                    <option [value]="country.id" *ngFor="let country of countries; index as i">{{ country.nombre }}
+                    </option>
+                </select>
+
+            </div>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button (click)="save()" type="button" class="btn btn-outline-dark">Save</button>
+</div>
